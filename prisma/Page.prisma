@@ -1,0 +1,11 @@
+
+model Page {
+  id        Int      @id @default(autoincrement())
+  parentId  Int?
+  slug      String
+  title     String
+  content   String?
+
+  @@index([slug])
+  @@index([parentId])
+}
